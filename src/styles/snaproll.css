@@ -1,0 +1,50 @@
+:root {
+  --sr-transition-duration: 1000ms;
+}
+
+.sr-cont {
+  position: relative;
+  width: 100%;
+  height: 100vh; 
+  height: 100dvh; 
+  overflow: hidden;
+  overscroll-behavior: none; 
+}
+
+.sr-sec {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+
+  transform: translateY(100%);
+  transition: transform var(--sr-transition-duration)
+    cubic-bezier(0.645, 0.045, 0.355, 1);
+  z-index: 1;
+}
+
+.sr-sec::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+.sr-sec:first-of-type {
+  transform: translateY(0);
+}
+
+.sr-sec.sr-active {
+  transform: translateY(0);
+  z-index: 10;
+}
+
+.sr-sec.sr-prev {
+  transform: translateY(-100%);
+  z-index: 5;
+}

@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lugrasimo&display=swap");
+@import "tailwindcss";
+
+#page::-webkit-scrollbar,
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
+}
+
+#page,
+html,
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+  font-family: var(--font-lato);
+}
+
+@theme {
+  --color-primary: #0072bc;
+  --color-primary-dark: #004a80;
+  --color-primary-light: #29abe2;
+  --color-slate-dark: #002845;
+  --font-lato: "Lato", sans-serif;
+  --font-lugrasimo: "Lugrasimo", cursive;
+}
+
+:root {
+  --gold: 42 52% 54%;
+  --primary-color: #0072bc;
+  --primary-dark: #004a80;
+  --primary-light: #29abe2;
+}
+
+.lugrasimo-regular {
+  font-family: "Lugrasimo", cursive !important;
+}
